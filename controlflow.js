@@ -115,3 +115,95 @@ switch ("Red")
 }
 
 
+// Early Return Pattern
+function score(value) {
+    if (value > 90) {
+        return "Value is more than 90";
+    } else if (value > 80) {
+        return "Value is more than 80";
+    } else if (value > 70) {
+        return "Value is more than 70";
+    } else if (value > 60) {
+        return "Value is more than 60";
+    } else {
+        return "Value is more than 60";
+    }
+}
+
+//score(65);
+    console.log(score(75))
+
+// function score1(value) {
+//     if (value > 90) return "Value is more than 90";
+//     else if (value < 80) return "Value is less than 80";
+//     else if (value < 70) return "Value is less than 70";
+//     else if (value < 60) return "Value is less than 60";
+//     else return "Value is less than 60"
+// }
+
+// score1(80);
+//     console.log(score1(80))
+
+
+// Javascript Controlflow Ex:
+
+
+// Example:1
+let x = 2;
+
+switch (x) {
+    case 2:
+        console.log("Two");
+        break;
+
+    case 3:
+        console.log("Three");
+        break;
+}
+
+//Exmple:2
+function getGrade(score) {
+    if (score >= 90 && score <= 100) {
+        return "A+";
+    } else if (score >= 80 && score <= 89) {
+        return "A";
+    } else if (score >= 70 && score <= 79) {
+        return "B";
+    } else if (score >= 60 && score <= 69) {
+        return "C";
+    } else if (score >= 33 && score <= 59) {
+        return "D";
+    } else if (score >= 0 && score <= 32) {
+        return "Fail";
+    } else {
+        return "Invalid Marks";
+    }
+}
+
+console.log(getGrade(95)); // A+
+console.log(getGrade(72)); // B
+console.log(getGrade(20)); // Fail
+console.log(getGrade(120)); // Invalid Marks
+
+//Example:3
+function playGame(player1, player2) {
+    if (player1 === player2) {
+        return "Draw";
+    } else if (
+        (player1 === "rock" && player2 === "scissors") ||
+        (player1 === "paper" && player2 === "rock") ||
+        (player1 === "scissors" && player2 === "paper")
+    ) {
+        return player1;
+    } else {
+        return player2;
+    }
+}
+
+console.log(playGame("rock", "scissors"));   // rock
+console.log(playGame("paper", "rock"));      // paper
+console.log(playGame("scissors", "paper"));  // scissors
+console.log(playGame("rock", "rock"));       // Draw
+
+
+
