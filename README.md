@@ -1,104 +1,157 @@
-<h1>Example or Excercise:</h1>
 <div>
-<h3>Example 1 :</h3>
-<p>console.log(nm);</p>
-<p>let nm = "name";</p>
-<p>Answer or Error: </p>
-<p>Why : </p>
-</div>
- 
-<div>
-<h3>Example 2 :</h3>
-<p>console.log(b);</p>-
-<p>var b = "username";</p>
-<p>Answer or Error: </p>
-<p>Why : </p>
-</div>
- 
-<div>
-<h3>Example 3 :</h3>
-<p>var x = 1;</p>
-<p>{
-    var x= 2;
+<h1>Example 1 :</h1>
+<p>let x = 10;</p>
+<p>let y = 20;</p>
+<p>if(x>5 && y > 5){
+    console.log("Both are greater than 5");
+}else{
+    console.log("One or both are not greater than 5");
 }
+<p>Output: Both are greater than 5
+    Reason: Both conditions are true, so && returns true.</p>
 </p>
-<p>console.log(x);</p>
-<p>Answer or Error: </p>
-<p>Why : </p>
 </div>
- 
+
 <div>
-<h3>Example 4 :</h3>
-<p>let a = 10; </p>
-<p>{
-    let a = 20;
-    console.log("Inside:", a);
+<h1>Example 2 :</h1>
+<p>let isAdmin = true;</p>
+<p>let isLoggedIn = false;</p>
+<p>if(isAdmin || isLoggedIn){
+    console.log("Acess granted");
+}else{
+    console.log("Acess Denied");
 }</p>
-<p>
-console.log("Outside:", a);
-</p>
-<p>Answer or Error: </p>
-<p>Why : </p>
-</div>
- 
-<div>
-<h3>Example 5 :</h3>
-<p>const person = {name: "demo"}; </p>
-on console.log
-<p>person.name= "user"; ✅</p>
-<p>person = {} ; ❌ </p>
-<p>Answer or Error: </p>
-<p>Why : </p>
+<p>Output: Acess granted
+   Reason: || returns true because one condition is true.</p>
 </div>
 
-<!-- Day 2 -->
+<div>
+<h1>Example 3 :</h1>
+<p>let temp = 35;</p>
+<p>if(!(temp > 30)){
+    console.log("Hot day");
+}else{
+    console.log("Pleasant day");
+}</p>
+<p>Output: Pleasant day
+   Reason: !(temp > 30) becomes false, so else runs.</p>
+</div>
 
-<h3>Example 1 :</h3>
-<p>true + false </p>
-<p>1 + 0 = 1 ans is 1 </p>
-<p>why: true is 1 and false is 0</p>
-</div>
- 
 <div>
-<h3>Example 2 :</h3>
-<p>null + 1 </p>
-<p>ans is 1 </p>
-<p>why: null is 0 and 1 is 1</p>
+<h1>Example 4 :</h1>
+<p>let a = 0;</p>
+<p>if(a){
+    console.log("Truthy value");
+}else{
+    console.log("Falsy value");
+}</p>
+<p>Output: Falsy value
+   Reason: 0 is a falsy value in JavaScript.</p>
 </div>
- 
+
 <div>
-<h3>Example 3 :</h3>
-<p>"12" + 12 </p>
-<p>ans is '1212'</p>
-<p>why: + is considerd as a mixed that two values</p>
+<h1>Example 5 :</h1>
+<p>let score = 78;</p>
+<p>let grade = score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : "D";</p>
+<p>console.log("Grade:", grade);</p>
+<p>Output: Grade: C
+   Reason: Score 78 matches the >= 70 condition.</p>
 </div>
- 
+
 <div>
-<h3>Example 4 :</h3>
-<p>!! undefined</p>
-<p>ans is false</p>
-<p>why: !! this is considerd ans a false values when ! is come that is true values</p>
+<h1>Example 6 :</h1>
+<p>let points = 120;</p>
+<p>let status = points >= 100 ? "Gold" : points >= 50 ? "Silver" : "Bronze";</p>
+<p>console.log("Status:", status);</p>
+<p>Output: Status: Gold
+   Reason: Points are greater than or equal to 100.</p>
 </div>
- 
+
 <div>
-<h3>Example 5 :</h3>
-<p>"12" - 1 </p>
-<p>"12" - 1 = 11</p>
-<p>why: - is does not considered strings</p>
+<h1>Example 7:</h1>
+<p>let loggedIn = true;</p>
+<p>let hasToken = false;</p>
+<p>let access = loggedIn && hasToken ? "Allow" : "Deny";</p>
+<p>console.log("access:", access);</p>
+<p>Output: access: Deny
+   Reason: true && false evaluates to false.</p>
 </div>
- 
+
 <div>
-<p> why typeof NaN --> number </p> 
-<p>NaN is a failed number oprations that why that type is number</p>
-<p> ex. "hello" + 5 --> NaN</p>
-<p>ans is false</p>
-<p>why: !! this is considerd ans a false values when ! is come that is true values</p>
+<h1>Example 8:</h1>
+<p>let a = 5;</p>
+<p>a++</p>
+<p>console.log(a);</p>
+<p>Output: 6
+   Reason: Post-increment increases value after execution..</p>
 </div>
- 
+
 <div>
-<p>Undefined vs Null</p>
-<p>let x;</p>
-<p>console.log(x);</p>
-<p>let y = null;</p>
-<p>console.log(y);</p>
+<h1>Example 9:</h1>
+<p>let a = 8;</p>
+<p>++a</p>
+<p>console.log(a);</p>
+<p>Output: 9
+   Reason: Pre-increment increases value before execution.</p>
+</div>
+
+<div>
+<h1>Example 10:</h1>
+<p>let b = 4;</p>
+<p>let c = b++</p>
+<p>console.log(b, c);</p>
+<p>Output: 5 4
+   Reason: b++ assigns old value to c then increments b.</p>
+</div>
+
+<div>
+<h1>Example 11:</h1>
+<p>let b = 4;</p>
+<p>let c = ++b</p>
+<p>console.log(b, c);</p>
+<p>Output: 5 5
+   Reason: ++b increments first, then assigns the value.</p>
+</div>
+
+<div>
+<h1>Example 11:</h1>
+<p>let m = 10;</p>
+<p>console.log(m--)</p>
+<p>console.log(m);</p>
+<p>Output: 10, 9
+   Reason: Value is printed first, then decremented.</p>
+</div>
+
+<div>
+<h1>Example 11:</h1>
+<p>let n = 5;</p>
+<p>let result = n++ + ++n;</p>
+<p>console.log(result);</p>
+<p>Output: 12
+   Reason: Post-increment returns old value and pre-increment returns new value.</p>
+</div>
+
+<div>
+<h1>Example 11:</h1>
+<p>let likes = 100;</p>
+<p>function likePost(){
+result ++likes;
+}</p>
+<p>console.log(likePost());</p>
+<p>console.log(likes);</p>
+<p>Output: Error
+   Reason: result ++likes is invalid JavaScript syntax.</p>
+</div>
+
+<div>
+<h1>Example 12:</h1>
+<p>let count = 5;</p>
+<p>if(count-- === 5){   
+console.log("Matched");
+}else{
+    console.log("Not Matched"); 
+}</p>
+<p>Output: Matched
+   Reason: count-- compares before decrementing.</p>
+<p></p>
 </div>
