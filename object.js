@@ -1,0 +1,35 @@
+// Objects vs Array
+// Objects -- when you want to show all data based on
+// one entity(k j entity mate all data jota hoy) (ex.
+// one User data)
+
+// Array -- when you want to show entity (ex. all
+// users)
+
+// create
+// varabile = {}
+// key : value --> key-value sturcture
+let User ={
+    name:"vidhi",
+    email:"vidhi@gmail.com",
+    rollno:7
+}
+
+// access (dot vs square notation)
+
+// variable_name.key;
+User.name;
+User.email;
+
+// User.first-name;
+
+// variable_name['key'];
+User['name'];
+
+// User[first_name]
+
+// let demo = "name"
+
+// User[demo] --> convert into name (demo = 'name')
+
+// --> output: abc
