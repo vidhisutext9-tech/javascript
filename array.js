@@ -373,3 +373,206 @@ let arr8 = [1, 2, 3, 4, 5, 6, 7];
 // let arr9 = [...arr8];
 // ... --> rest --> into function
 // ... --> spred --> into Array and Object
+
+
+// Examples of array:-
+
+// 1 Double daily steps count
+// Real life: Fitness app doubling step goal
+
+const step = [1000, 2000, 3000];
+
+function doubleSteps(step) {
+  return step * 2;
+}
+
+const newSteps = steps.map(doubleSteps);
+
+// 2. Convert minutes to seconds
+// Real life: Video duration calculation
+
+const minutes = [1, 5, 10];
+
+const seconds = minutes.map(function(min) {
+  return min * 60;
+});
+
+// 3. Add ₹50 delivery charge to prices
+// Real life: Food delivery app
+
+const price = [200, 350, 500];
+
+const finalPrices = prices.map(price => price + 50);
+
+// 4. Convert exam marks to grades
+// Real life: Result system
+
+const mark = [35, 72, 88, 40];
+
+function getGrade(mark) {
+  return mark >= 40 ? 'Pass' : 'Fail';
+}
+
+const grades = marks.map(getGrade);
+
+// 5. Capitalize names
+// Real life: Display usernames properly
+
+const names = ['rahul', 'neha', 'amit'];
+
+const formattedNames = names.map(name =>
+  name[0].toUpperCase() + name.slice(1)
+);
+
+// 6. Apply 10% discount
+// Real life: Shopping sale
+
+const price1 = [500, 1000, 1500];
+
+function applyDiscount(price) {
+  return price - price * 0.10;
+}
+
+const discounted = price1.map(applyDiscount);
+
+// 7. Add bonus points to scores based on condition
+// Real life: Game scoring system
+
+const scores1 = [45, 60, 85];
+
+const finalScores = scores.map(score => {
+  if (score >= 80) return score + 20;
+  if (score >= 50) return score + 10;
+  return score;
+});
+
+// 8. Convert temperatures with formula
+// Real life: Weather app
+
+const celsius = [0, 20, 30];
+
+function toFahrenheit(temp) {
+  return (temp * 9/5) + 32;
+}
+
+const fahrenheit = celsius.map(toFahrenheit);
+
+// 9. Generate table of numbers
+// Real life: Math learning app
+
+const numbers = [1, 2, 3, 4];
+
+const tableOfTwo = numbers.map(num => num * 2);
+
+// 10. Combine map with string formatting
+// Real life: SMS notification system
+
+const balances = [500, 1200, 300];
+
+const messages = balances.map(balance =>
+  `Your balance is ₹${balance}`
+);
+
+
+// JavaScript .filter() Method Example:
+
+// 1. Get even numbers
+// **Real life:** Find even roll numbers
+
+const numbers1 = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers1.filter(num => num % 2 === 0);
+
+// 2. Filter adults
+// **Real life:** Allow only 3+ users
+
+const ages = [2, 1, 10, 16, 5];
+function isAdult(age) {
+  return age >= 18;
+}
+const adults = ages.filter(isAdult);
+
+// 3. Remove empty items
+// **Real life:** Clean user input
+
+const inputs = ['Hello', '', 'World', '', 'JS'];
+const validInputs = inputs.filter(text => text !== '');
+
+// ### 4. Filter passing marks
+// **Real life:** Exam result system
+
+const marks2 = [35, 72, 88, 40, 25];
+const passedStudents = marks2.filter(mark => mark >= 40);
+
+// 5. Get affordable prices
+// **Real life:** Shopping app price filter
+
+const prices2 = [199, 499, 999, 1499, 299];
+const affordable = prices2.filter(price => price <= 500);
+
+// 6. Filter long words
+// **Real life:** Search keyword validation
+
+const words = ['hi', 'hello', 'javascript', 'ok'];
+function isLongWord(word) {
+  return word.length > 3;
+}
+const longWords = words.filter(isLongWord);
+
+// 7. Filter positive numbers
+// **Real life:** Bank transaction validation
+
+const transactions = [200, -100, 500, -50, 300];
+const credits = transactions.filter(amount => amount > 0);
+
+// 8. Filter numbers within a range
+// **Real life:** Score selection
+
+const scores3 = [45, 60, 85, 30, 90];
+const selectedScores = scores3.filter(score => score >= 50 && score <= 90);
+
+// JavaScript .reduce() Method Example:
+
+// ### 1. Total money in wallet
+// **Real life:** Add all cash amounts
+
+const money = [100, 200, 50];
+const totalMoney = money.reduce((sum, amount) => sum + amount, 0);
+
+// 2
+const steps3 = [3000, 5000, 4000, 6000];
+function addSteps(total, step) {
+  return total + step;
+}
+const weeklySteps = steps3.reduce(addSteps, 0);
+
+// 3
+const prices3 = [499, 299, 199];
+const totalPrice = prices.reduce((total, price) => total + price, 0);
+
+// 4
+const marks3 = [45, 88, 67, 92];
+const highest = marks3.reduce((max, mark) => {
+  return mark > max ? mark : max;
+}, marks[0]);
+
+// 5
+const words1 = ['Hi', 'Hello', 'JS'];
+const totalChars = words1.reduce((count, word) => count + word.length, 0);
+
+// 6
+const words2 = ['Learning', 'JavaScript', 'is', 'fun'];
+const sentence = words2.reduce((text, word) => text + ' ' + word);
+
+// 7
+const marks4 = [35, 72, 88, 40, 25];
+const passCount = marks4.reduce((count, mark) => {
+  return mark >= 40 ? count + 1 : count;
+}, 0);
+
+// 8
+const transactions1 = [1000, -200, -300, 500];
+const finalBalance = transactions1.reduce((balance, amount) => balance + amount, 0);
+
+// 9
+const items = ['Pen', 'Book', 'Pencil'];
+const result1 = items.reduce((text, item) => text + ', ' + item);
