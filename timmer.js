@@ -1,35 +1,67 @@
-// setTimeout, cleartimeout
-
-// setTime ---> run only one time
+// SetTimeout, clearTimeout
+// setTimeout --> run only one time
 // timeout -- in ms
-setTimeout(() => {
-    console.log("hello");
+
+let timmer = setTimeout(() => {
+  console.log("Hello");
 }, 2000);
 
-// setInterval, ClearInterval
-// setInterval ---> run into loop(infinte times)
-let timmer = setInterval(() => {
-    console.log("hi, set interval");
+clearTimeout(timmer);
+
+// setInterval, clearInterval
+// setInterval --> run into loop(infinte times)
+let timmer1 = setInterval(() => {
+  console.log("Hi");
 }, 2000);
 
+// clear Interval
+clearInterval(timmer1);
 
-//counter
-
+// counter
 let number = 0;
-let num_counter = setInterval (() => {
-    if (number <=10) {
-        console.log(number);
-    }
-},1000);
+setInterval(() => {
+  if (number <= 10) {
+    console.log(number);
+    number++;
+  }
+}, 1000);
 
-
-// popup window
-let button = document.querySelector("button");
+// popup windows
 let card = document.querySelector(".card");
+let btn = document.querySelector("button");
+
 setTimeout(() => {
-    card.style.display = "block";
+  card.style.display = "block";
 }, 5000);
 
-button.addEventListener("click", () => {
+btn.addEventListener("click", () => {
   card.style.display = "none";
 });
+
+
+// Real use : delaying UI actions , auto-refresh
+
+
+
+// Downloading card
+let bar = document.querySelector(".progress-bar");
+let percent = document.querySelector(".percent");
+let h2 = document.querySelector("h2");
+let count = 0;
+
+setInterval(() => {
+    if (count <= 100) {
+        bar.style.width = `${count}%`;// 1,2,3...100
+        percent.textContent = `${count}%`;
+        count++;
+    }
+    if (count === 100){
+        h2.textContent = "downloaded";
+    }
+    if (count <= 500){
+        document.querySelector(".photo").style.height = `${count}px`;
+    }
+}, 100);
+
+
+// setTimeout vs setInterval
