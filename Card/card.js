@@ -148,25 +148,26 @@ function RenderUi() {
 }
 RenderUi();
 
-//up down btn
+// up btn and down btn
 let upBtn = document.querySelector("#upBtn");
-
-upBtn.addEventListener("click", () => {
-  let lastchild = stack.lastElementChild;
-
-  if(lastchild){
-    stack.appendChild(lastchild, stack.firstElementChild);
-  }
-});
-
-//down btn
 let downBtn = document.querySelector("#downBtn");
 
-downBtn.addEventListener("click", () => {
-  let firstchild = stack.firstElementChild;
+upBtn.addEventListener("click", () => {
+    console.log(stack.lastChild);
+    lastChild = stack.lastElementChild;
 
-  if(firstchild){
-    stack.appendChild(firstchild, stack.lastElementChild.nextSibling);
-  }
+    if (lastChild) {
+        stack.insertBefore(lastChild, stack.firstElementChild);
+        // insertBefore(element, element)
+    }
 });
 
+downBtn.addEventListener("click", () => {
+    console.log(stack.firstElementChild);
+    firstChild = stack.firstElementChild;
+
+    if (firstChild) {
+        stack.append(firstChild, stack.firstElementChild);
+        // insertBefore(element, element)
+    }
+});
